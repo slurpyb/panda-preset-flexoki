@@ -4,12 +4,10 @@ import { tokens, semanticTokens } from './tokens'
 
 const definePreset = <T extends Preset>(config: T) => config
 
-export const preset = definePreset({
+export default definePreset({
   name: 'flexoki',
   theme: {
     tokens,
     semanticTokens
   }
-})
-
-export default preset
+});
