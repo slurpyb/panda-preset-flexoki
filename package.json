@@ -1,0 +1,46 @@
+{
+  "name": "@slurpyb/panda-preset-flexoki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "authors": [
+    "Jordan Sweeting <slurpyb@fastmail.com>",
+    "Steph Ango (https://stephango.com)"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build-fast": "tsup --no-dts",
+    "dev": "pnpm build-fast --watch"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@pandacss/dev": "^0.51.1",
+    "@pandacss/types": "^0.51.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  },
+  "sideEffects": false,
+  "homepage": "https://github.com/kepano/flexoki",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slurpyb/panda-preset-flexoki.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
